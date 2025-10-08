@@ -8,6 +8,7 @@ import { Sidebar,
         SidebarGroupLabel, 
         SidebarHeader, 
         SidebarMenu, 
+        SidebarMenuBadge, 
         SidebarMenuButton, 
         SidebarMenuItem, 
         SidebarSeparator} from "./ui/sidebar";
@@ -74,6 +75,11 @@ const AppSidebar = () => {
                       <span>{item.title}</span>
                     </a>
                   </SidebarMenuButton>
+                  {
+                    item.title === "Inbox" && (
+                      <SidebarMenuBadge>3</SidebarMenuBadge>
+                    )
+                  }
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
